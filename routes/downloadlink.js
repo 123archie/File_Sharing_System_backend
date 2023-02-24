@@ -1,6 +1,6 @@
 const route=require('express').Router();
 const File=require('../models/fileSchema');
-route.get('/:uuid', async (req, resp)=>{
+route.get(':uuid', async (req, resp)=>{
   const file=await File.findOne({uuid:req.params.uuid});
   if(!file){
     return resp.json({error: 'Link expired'});
