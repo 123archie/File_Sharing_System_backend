@@ -21,7 +21,7 @@ let upload = multer({
 }).single("myfile");
 routes.post("/test",(req, resp) => {
 upload(req, resp, async (error) => {
-  // console.log(req.file);
+  console.log(req.file);
    if (!req.file) {
     return resp.json({ error: "Please upload your file" });
   }
