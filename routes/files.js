@@ -19,7 +19,7 @@ let storage = multer.diskStorage({
 let upload = multer({
   storage: storage
 }).single("myfile");
-routes.get("",(req, resp) => {
+routes.post("",(req, resp) => {
 upload(req, resp, async (error) => {
   console.log(req.file);
    if (!req.file) {
