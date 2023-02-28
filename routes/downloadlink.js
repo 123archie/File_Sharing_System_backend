@@ -6,8 +6,8 @@ route.get('/:uuid', async (req, resp)=>{
   if(!file){
     return resp.render({error: 'Link expired'});
   }
-  const download_file=`${process.env.APP_BASE_URL}/file/download/${file.uuid}`;
-  // const download_file=`${__dirname}/../${file.path}`;
+  // const download_file=`${process.env.APP_BASE_URL}/file/download/${file.uuid}`;
+  const download_file=`${__dirname}/../${file.path}`;
   resp.download(download_file);
   console.log(download_file);
 });
