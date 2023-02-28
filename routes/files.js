@@ -27,7 +27,7 @@ upload(req, resp, async (error) => {
   }
   if (error) {
      return resp.status(500).send({ error: error.message });
-  }console.log(req.file);
+  }
   const file = new File({
       filename: req.file.filename,
       uuid: uuid4(),
