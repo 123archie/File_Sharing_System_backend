@@ -4,7 +4,7 @@ route.get('/:uuid', async (req, resp)=>{
   const file=await File.findOne({uuid:req.params.uuid});
   // console.log(file);
   if(!file){
-    return resp.render({error: 'Link expired'});
+    return resp.json({error: 'Link expired'});
   }
   // const download_file=`${process.env.APP_BASE_URL}/file/download/${file.uuid}`;
   const download_file=`${__dirname}/../${file.path}`;
