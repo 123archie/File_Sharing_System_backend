@@ -9,5 +9,5 @@ const fileSchema=new Schema({
   sender_email: { type: String, required: false },
   reciever_email: { type: String, required: false },
 });
-module.exports=mongoose.model("MyFileSchema", fileSchema);
+module.exports=mongoose.model("MyFile", myfile);
 
