@@ -1,4 +1,6 @@
 require('dotenv').config();
+const express = require("express");
+const app=express();
 const mongoose=require('mongoose');
 const { db } = require('./models/fileSchema');
 function connectDB() {
@@ -8,4 +10,7 @@ function connectDB() {
         console.log('Connection established successfully');
     })
  }
+app.listen(5500,()=>{
+    console.log("Database connected");
+})
 module.exports=connectDB;
