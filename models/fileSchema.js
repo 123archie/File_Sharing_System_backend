@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
  
-const fileSchema=new Schema({
+const myfile=new Schema({
   filename: { type: String, required: true },
   size: { type: Number, required: true },
   path: { type: String, required: true },
