@@ -10,7 +10,7 @@ function connectDB() {
         console.log('Connection established successfully');
     })
  }
-app.listen(5500,()=>{
-    console.log("Database connected");
-})
+// app.listen(5500,()=>{
+//     console.log("Database connected");
+// })
 module.exports=connectDB;

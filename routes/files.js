@@ -52,7 +52,7 @@ upload(req, resp, async (error) => {
       } 
    )
  });
- app.listen(5500,()=>{
-  console.log("Checking")
- });
+//  app.listen(5500,()=>{
+//   console.log("Checking")
+//  });
 module.exports = routes;
