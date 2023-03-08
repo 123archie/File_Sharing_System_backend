@@ -21,7 +21,7 @@ let storage = multer.diskStorage({
 let upload = multer({
   storage: storage
 }).single("myfile");
-routes.get("", (req, resp) => {
+routes.get("/test", (req, resp) => {
 upload(req, resp, async (error) => {
   // console.log(req.file);
    if (!req.file) {
@@ -52,7 +52,7 @@ upload(req, resp, async (error) => {
       } 
    )
  });
-//  app.listen(5500,()=>{
-//   console.log("Checking")
-//  });
+ app.listen(5500,()=>{
+  console.log("Checking")
+ });
 module.exports = routes;
