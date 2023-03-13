@@ -1,6 +1,7 @@
 const route=require('express').Router();
 const File=require('../models/fileSchema');
 route.get('/:uuid', async (req, resp)=>{
+  console.log("hello")
   const file=await File.findOne({uuid:req.params.uuid});
   console.log(file);
   if(!file){
